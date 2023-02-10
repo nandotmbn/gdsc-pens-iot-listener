@@ -17,5 +17,5 @@ app.post('/:appName/:deviceId', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 http.listen(port, () => console.log(`App is listening on port ${port}`));
