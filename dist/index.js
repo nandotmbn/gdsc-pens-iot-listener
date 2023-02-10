@@ -18,5 +18,5 @@ app.post('/:appName/:deviceId', function (req, res) {
     io.emit("".concat(req.params.appName, ":").concat(req.params.deviceId), req.body);
     res.send('Express + TypeScript Server');
 });
-var port = process.env.PORT || 8888;
+var port = process.env.PORT;
 http.listen(port, function () { return console.log("App is listening on port ".concat(port)); });
