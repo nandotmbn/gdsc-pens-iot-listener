@@ -5,15 +5,6 @@ import bodyParser from "body-parser";
 import cors from "cors"
 
 module.exports = function (app: Express, io: Socket) {
-	mongoose
-		.connect(
-			"mongodb+srv://orlandosykes:orlandosykes@technorcluster.0ayow.mongodb.net/IoTListener?retryWrites=true&w=majority"
-			// "mongodb://localhost/Archord"
-		)
-		.then(() => console.log("Connected to MongoDB"))
-		.catch((e) => {
-			throw new Error("Error : " + e);
-		});
 	app.use(function (req, res, next) {
 		res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
 		res.header(

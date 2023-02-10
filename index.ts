@@ -14,7 +14,7 @@ WebSocket(io);
 
 app.post('/:appName/:deviceId', (req: Request, res: Response) => {
   io.emit(`${req.params.appName}:${req.params.deviceId}`, req.body)
-  res.send('Express + TypeScript Server');
+  res.send(req.body);
 });
 
 const port = process.env.PORT;
