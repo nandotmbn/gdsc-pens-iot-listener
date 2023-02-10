@@ -4,18 +4,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-var mongoose_1 = __importDefault(require("mongoose"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var cors_1 = __importDefault(require("cors"));
 module.exports = function (app, io) {
-    mongoose_1.default
-        .connect("mongodb+srv://orlandosykes:orlandosykes@technorcluster.0ayow.mongodb.net/IoTListener?retryWrites=true&w=majority"
-    // "mongodb://localhost/Archord"
-    )
-        .then(function () { return console.log("Connected to MongoDB"); })
-        .catch(function (e) {
-        throw new Error("Error : " + e);
-    });
+    // mongoose
+    // 	.connect(
+    // 		"mongodb+srv://orlandosykes:orlandosykes@technorcluster.0ayow.mongodb.net/IoTListener?retryWrites=true&w=majority"
+    // 		// "mongodb://localhost/Archord"
+    // 	)
+    // 	.then(() => console.log("Connected to MongoDB"))
+    // 	.catch((e) => {
+    // 		throw new Error("Error : " + e);
+    // 	});
     app.use(function (req, res, next) {
         res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, token");
